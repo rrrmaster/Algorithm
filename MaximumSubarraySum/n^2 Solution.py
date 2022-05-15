@@ -3,11 +3,11 @@ import time
 
 def solution(array):
     value = 0
-    n = len(arr)
+    n = len(array)
     for a in range(n):
         _sum = 0
-        for b in range(n):
-            _sum += arr[b]
+        for b in range(a,n):
+            _sum += array[b]
             value = max(value, _sum)
     return value
 
@@ -19,4 +19,4 @@ if __name__ == '__main__':
 
     _max = solution(arr)
     print("maximum subarray sum :", _max)
-    print("time :", time.time() - start)
+    print("time :", "{:.10f}".format(time.time() - start))
